@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'resEditor' target in the 'resEditor' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
