@@ -12,6 +12,8 @@
 struct widget_pl{
 	NSRect rect;
 	resource_t * node;
+    double offsetX;
+    double offsetY;
 };
 
 
@@ -19,7 +21,7 @@ struct widget_pl{
 	NSPoint location;
     NSColor *itemColor;
     NSColor *backgroundColor;
-    
+    struct widget_pl dragNode;
     
     // private variables that track state
     BOOL dragging;
@@ -110,6 +112,8 @@ struct widget_pl{
 
 - (BOOL)isPointInItem:(NSPoint)testPoint;
 - (NSRect) widgetRect:(NSPoint)testPoint ResNode:(resource_t * )resNode SelNode:(resource_t **) selNode;
+- (void)updateRect;
+- (void)updateDragCoordinat;
 ///////////////
 
 

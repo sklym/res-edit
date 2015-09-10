@@ -12,11 +12,12 @@
 
 @interface resEditorAppDelegate : NSObject <NSApplicationDelegate> {
 	NSWindow *window;
+    NSWindow *windowStringResource;
 	NSString * workFilePath_;
 	
 }
 @property (assign) IBOutlet NSWindow *window;
-
+@property (assign) IBOutlet NSWindow *windowStringResource;
 
 - (void) openEditor: (NSString *) inPath;
 - (void) show: (resource_t *) res_node Text:(NSMutableString *) text;
@@ -25,4 +26,5 @@
 
 @interface resEditorAppDelegate (MenuAction)
 	- (IBAction) openFile:(id)sender;
+- (IBAction) openStringResourceFile:(id)sender;
 @end

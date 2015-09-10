@@ -39,4 +39,31 @@
 		//return nil;
 }
 
+- (IBAction) openStringResourceFile: (id)sender{
+    [windowStringResource orderFront:sender];
+    return;
+     NSString * title = @"Open String Resource File";
+    
+    NSOpenPanel* panel = [[NSOpenPanel openPanel] retain];
+	
+    [panel setCanChooseDirectories: YES];
+    [panel setCanChooseFiles: YES];
+    [panel setAllowsMultipleSelection: NO];
+    [panel setTitle: title];
+	[panel setCanCreateDirectories: NO];
+	NSString *frType = @"fr";
+	NSMutableArray * filetypes = [NSMutableArray arrayWithCapacity:1];
+	[filetypes addObject:frType];
+	[panel setAllowedFileTypes: filetypes];
+	
+	if ([panel runModal] == NSFileHandlingPanelOKButton)
+    {
+		NSString * workFilePath = [[NSString alloc] initWithString: [panel filename]];
+		[self openEditor: [workFilePath retain]];
+		[workFilePath release];
+	}
+    [panel release];
+                              
+}
+
 @end

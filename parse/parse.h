@@ -27,4 +27,4 @@ enum tokens {
 void error (const char * fmt, ...);
 enum tokens scan(const char * buf);
 void parseRes(resource_t * cur_node);
-#endif __parse_h__
+#endif //__parse_h__

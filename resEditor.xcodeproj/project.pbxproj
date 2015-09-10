@@ -18,6 +18,8 @@
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		CA74921A1BA1BCA70019D8BC /* StringResourceDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = CA7492191BA1BCA70019D8BC /* StringResourceDataSource.m */; };
+		CADE04BB1BA1DCE200A95846 /* StringResource.m in Sources */ = {isa = PBXBuildFile; fileRef = CADE04BA1BA1DCE200A95846 /* StringResource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,10 @@
 		85C867AB199CFBF300A03361 /* MainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainWindowController.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* resEditor-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "resEditor-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* resEditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = resEditor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA7492181BA1BCA70019D8BC /* StringResourceDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringResourceDataSource.h; sourceTree = "<group>"; };
+		CA7492191BA1BCA70019D8BC /* StringResourceDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringResourceDataSource.m; sourceTree = "<group>"; };
+		CADE04B91BA1DCE200A95846 /* StringResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringResource.h; sourceTree = "<group>"; };
+		CADE04BA1BA1DCE200A95846 /* StringResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringResource.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,13 +67,15 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				CA7492171BA1BC660019D8BC /* TableDataSource */,
+				CA7492161BA1BC500019D8BC /* Controls */,
 				256AC3D80F4B6AC300CF3369 /* resEditorAppDelegate.h */,
 				256AC3D90F4B6AC300CF3369 /* resEditorAppDelegate.m */,
 				85AD54D91987BF1800CF80B3 /* MenuAction.m */,
-				85BE23131993888400A4A9E2 /* FCView.h */,
-				85BE23141993888400A4A9E2 /* FCView.m */,
 				85C867AA199CFBF300A03361 /* MainWindowController.h */,
 				85C867AB199CFBF300A03361 /* MainWindowController.m */,
+				CADE04B91BA1DCE200A95846 /* StringResource.h */,
+				CADE04BA1BA1DCE200A95846 /* StringResource.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -152,6 +160,24 @@
 			name = parse;
 			sourceTree = "<group>";
 		};
+		CA7492161BA1BC500019D8BC /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				85BE23131993888400A4A9E2 /* FCView.h */,
+				85BE23141993888400A4A9E2 /* FCView.m */,
+			);
+			name = Controls;
+			sourceTree = "<group>";
+		};
+		CA7492171BA1BC660019D8BC /* TableDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				CA7492181BA1BCA70019D8BC /* StringResourceDataSource.h */,
+				CA7492191BA1BCA70019D8BC /* StringResourceDataSource.m */,
+			);
+			name = TableDataSource;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -222,6 +248,8 @@
 				85AD54DA1987BF1800CF80B3 /* MenuAction.m in Sources */,
 				85BE2238199375D600A4A9E2 /* model.c in Sources */,
 				85BE2239199375D600A4A9E2 /* parse.c in Sources */,
+				CA74921A1BA1BCA70019D8BC /* StringResourceDataSource.m in Sources */,
+				CADE04BB1BA1DCE200A95846 /* StringResource.m in Sources */,
 				85BE223A199375D600A4A9E2 /* vector.c in Sources */,
 				85BE23151993888400A4A9E2 /* FCView.m in Sources */,
 				85C867AC199CFBF300A03361 /* MainWindowController.m in Sources */,

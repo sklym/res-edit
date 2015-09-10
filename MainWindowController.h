@@ -17,9 +17,11 @@
 	NSTextField * textTop;
 	NSTextField * textRight;
 	NSTextField * textBottom;
+    NSTextField * textName;
 }
 
-- (void) setRectLeft:(int)left Top:(int)top Right:(int) right Bottom:(int)bottom; 
+- (void) setRectLeft:(int)left Top:(int)top Right:(int) right Bottom:(int)bottom;
+- (void) setName:(NSString*) name;
 
 @property (assign) IBOutlet NSTextField * textArea_;
 @property (assign) IBOutlet FCView * custView;
@@ -27,5 +29,6 @@
 @property (assign) IBOutlet NSTextField * textTop;
 @property (assign) IBOutlet NSTextField * textRight;
 @property (assign) IBOutlet NSTextField * textBottom;
+@property (assign) IBOutlet NSTextField * textName;
 
 @end

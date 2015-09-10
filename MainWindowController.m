@@ -18,12 +18,17 @@
 @synthesize textTop;
 @synthesize textRight;
 @synthesize textBottom;
+@synthesize textName;
 
 - (void) setRectLeft:(int)left Top:(int)top Right:(int) right Bottom:(int)bottom{
 	[textLeft setIntValue:left];
 	[textTop setIntValue:top];
 	[textRight setIntValue:right];
 	[textBottom setIntValue:bottom];
+}
+
+- (void) setName:(NSString*) name{
+    [textName setStringValue:name];
 }
 
 @end
