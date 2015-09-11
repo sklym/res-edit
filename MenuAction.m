@@ -8,7 +8,8 @@
 
 
 #import "resEditorAppDelegate.h"
-
+#import "StringResource.h"
+#import "StringResourceDataSource.h"
 @implementation resEditorAppDelegate (MenuAction)
 
 - (IBAction) openFile:(id)sender
@@ -40,8 +41,8 @@
 }
 
 - (IBAction) openStringResourceFile: (id)sender{
-    [windowStringResource orderFront:sender];
-    return;
+ //   [windowStringResource orderFront:sender];
+ //   return;
      NSString * title = @"Open String Resource File";
     
     NSOpenPanel* panel = [[NSOpenPanel openPanel] retain];
@@ -58,9 +59,22 @@
 	
 	if ([panel runModal] == NSFileHandlingPanelOKButton)
     {
+        StringResource* strRes = [[StringResource alloc] init];
 		NSString * workFilePath = [[NSString alloc] initWithString: [panel filename]];
-		[self openEditor: [workFilePath retain]];
+		//english
+        [strRes parse:workFilePath];
+        //german
+        NSUInteger length = [workFilePath length];
+        
+       NSString * dePath = [NSString stringWithFormat:@"%@deDE.fr",[workFilePath substringToIndex:length - 7] ];
+        NSLog(@"%@", dePath);
+       [strRes parse:dePath];
+        
+        StringResourceDataSource * strDataSource = [[[windowStringResource windowController] tableView] dataSource];
+        [strDataSource setStringResource:strRes];
 		[workFilePath release];
+        [[[windowStringResource windowController] tableView] reloadData];
+        [windowStringResource orderFront:sender];
 	}
     [panel release];
                               

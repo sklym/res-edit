@@ -15,4 +15,6 @@
 
 - (void)parse:(NSString*)path;
 
+@property(readonly) NSMutableDictionary * englishDictionary;
+@property(readonly) NSMutableDictionary * germanDictionary;
 @end

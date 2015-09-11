@@ -11,6 +11,8 @@
 
 @interface StringResourceDataSource : NSObject<NSTableViewDataSource>{
     StringResource * stringResource;
+    NSUInteger count;
+    NSMutableArray *allKeys;
 }
 
 - (void)setStringResource:(StringResource *)aStringResource;

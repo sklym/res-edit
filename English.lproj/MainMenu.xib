@@ -784,7 +784,7 @@
                 <subviews>
                     <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="qVf-Ve-Zb5">
                         <rect key="frame" x="9" y="20" width="796" height="239"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <clipView key="contentView" id="shW-sy-Gjg">
                             <rect key="frame" x="1" y="17" width="794" height="221"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -861,5 +861,11 @@
             </view>
         </window>
         <customObject id="bu5-DM-iSI" customClass="StringResourceDataSource"/>
+        <customObject id="TS1-Vh-GeM" customClass="StringResWindowController">
+            <connections>
+                <outlet property="tableView" destination="SIu-dT-jtX" id="W5l-oM-7jK"/>
+                <outlet property="window" destination="Ybl-re-6ub" id="oo0-Kb-XWa"/>
+            </connections>
+        </customObject>
     </objects>
 </document>
