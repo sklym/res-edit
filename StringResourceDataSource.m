@@ -9,6 +9,13 @@
 #import "StringResourceDataSource.h"
 
 @implementation StringResourceDataSource
+
+- (void)dealloc{
+    [allKeys release];
+    [stringResource release];
+    [super dealloc];
+}
+
 /* Required method for the NSTableDataSource protocol. */
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)aTableView{
     return count;

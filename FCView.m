@@ -283,7 +283,7 @@
     
     // finished dragging, restore the cursor
     [NSCursor pop];
-    
+    [self updateRect];
     // the item has moved, we need to reset our cursor
     // rectangle
     [[self window] invalidateCursorRectsForView:self];

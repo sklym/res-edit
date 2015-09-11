@@ -106,7 +106,7 @@
                 } else
                     [scanner setScanLocation:++scanLocation];
             }
-            NSLog(@"Key-%@, Value-%@", key, value);
+            
             [dictionary setObject:value forKey:key];
             [value release];
             

@@ -27,7 +27,7 @@
 	[panel setCanCreateDirectories: NO];
 	NSString *frType = @"fr";
 	NSMutableArray * filetypes = [NSMutableArray arrayWithCapacity:1];
-	[filetypes addObject:frType];	
+	[filetypes addObject:frType];
 	[panel setAllowedFileTypes: filetypes];
 	
 	if ([panel runModal] == NSFileHandlingPanelOKButton)
@@ -36,14 +36,15 @@
 		[self openEditor: [workFilePath retain]];
 		[workFilePath release];
 	}
+    
     [panel release];
-		//return nil;
+    //return nil;
 }
 
 - (IBAction) openStringResourceFile: (id)sender{
- //   [windowStringResource orderFront:sender];
- //   return;
-     NSString * title = @"Open String Resource File";
+    //   [windowStringResource orderFront:sender];
+    //   return;
+    NSString * title = @"Open String Resource File";
     
     NSOpenPanel* panel = [[NSOpenPanel openPanel] retain];
 	
@@ -63,12 +64,10 @@
 		NSString * workFilePath = [[NSString alloc] initWithString: [panel filename]];
 		//english
         [strRes parse:workFilePath];
-        //german
+        //german - try open german resource file
         NSUInteger length = [workFilePath length];
-        
-       NSString * dePath = [NSString stringWithFormat:@"%@deDE.fr",[workFilePath substringToIndex:length - 7] ];
-        NSLog(@"%@", dePath);
-       [strRes parse:dePath];
+        NSString * dePath = [NSString stringWithFormat:@"%@deDE.fr",[workFilePath substringToIndex:length - 7] ];
+        [strRes parse:dePath];
         
         StringResourceDataSource * strDataSource = [[[windowStringResource windowController] tableView] dataSource];
         [strDataSource setStringResource:strRes];
@@ -76,8 +75,9 @@
         [[[windowStringResource windowController] tableView] reloadData];
         [windowStringResource orderFront:sender];
 	}
+    
     [panel release];
-                              
+    
 }
 
 @end
