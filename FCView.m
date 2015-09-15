@@ -194,7 +194,7 @@
 -(void)mouseDown:(NSEvent *)event
 {
     NSPoint clickLocation;
-    BOOL itemHit=NO;
+   
     
     // convert the click location into the view coords
     clickLocation = [self convertPoint:[event locationInWindow]

@@ -74,7 +74,7 @@
     NSCharacterSet* letter = [NSCharacterSet letterCharacterSet];
     NSCharacterSet* punctuation = [NSCharacterSet punctuationCharacterSet];
     
-    NSUInteger scanLocation = [scanner scanLocation];
+    NSUInteger scanLocation;
     while([scanner isAtEnd] == NO){
         scanLocation = [scanner scanLocation];
         if([scanner scanCharactersFromSet:comments intoString:NULL]){

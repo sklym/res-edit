@@ -44,7 +44,9 @@
     allKeys = [[NSMutableArray alloc] initWithCapacity:count ] ;
     [[stringResource englishDictionary] enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
         NSString * german = [[stringResource germanDictionary] objectForKey:key];
-        [allKeys addObject:[[StringResourceRow alloc] initWithValues:key english:obj german:german]];
+        StringResourceRow * item = [[StringResourceRow alloc] initWithValues:key english:obj german:german];
+        [allKeys addObject:item];
+        [item release];
     }];    
 }
 
