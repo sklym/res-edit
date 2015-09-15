@@ -20,7 +20,7 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
 	// Insert code here to initialize your application 
-	[window orderFront:self];
+	//[window orderFront:self];
 	//[self openEditor:@"/Volumes/Data/Works/SDK_CS5.5/InPageRobot/source/ErrorHandling.fr"];
 }
 

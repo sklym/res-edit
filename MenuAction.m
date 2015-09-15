@@ -72,7 +72,12 @@
         StringResourceDataSource * strDataSource = [[[windowStringResource windowController] tableView] dataSource];
         [strDataSource setStringResource:strRes];
 		[workFilePath release];
-        [[[windowStringResource windowController] tableView] reloadData];
+        NSTableView * tableView = [[windowStringResource windowController] tableView];
+       // [tableView setSortDescriptors:[NSArray arrayWithObjects:
+       //                                   [NSSortDescriptor sortDescriptorWithKey:@"1001" ascending:YES selector:@selector(compare:)],
+//nil]];
+        
+         [tableView reloadData];
         [windowStringResource orderFront:sender];
 	}
     

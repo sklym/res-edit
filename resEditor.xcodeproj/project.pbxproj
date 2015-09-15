@@ -18,6 +18,7 @@
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		CA3B904A1BA84AAD0004263E /* StringResourceRow.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3B90491BA84AAD0004263E /* StringResourceRow.m */; };
 		CA74921A1BA1BCA70019D8BC /* StringResourceDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = CA7492191BA1BCA70019D8BC /* StringResourceDataSource.m */; };
 		CADE04BB1BA1DCE200A95846 /* StringResource.m in Sources */ = {isa = PBXBuildFile; fileRef = CADE04BA1BA1DCE200A95846 /* StringResource.m */; };
 		CADE04BE1BA2E74800A95846 /* StringResWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = CADE04BD1BA2E74800A95846 /* StringResWindowController.m */; };
@@ -47,6 +48,8 @@
 		85C867AB199CFBF300A03361 /* MainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainWindowController.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* resEditor-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "resEditor-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* resEditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = resEditor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA3B90481BA84AAD0004263E /* StringResourceRow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringResourceRow.h; sourceTree = "<group>"; };
+		CA3B90491BA84AAD0004263E /* StringResourceRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringResourceRow.m; sourceTree = "<group>"; };
 		CA7492181BA1BCA70019D8BC /* StringResourceDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringResourceDataSource.h; sourceTree = "<group>"; };
 		CA7492191BA1BCA70019D8BC /* StringResourceDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringResourceDataSource.m; sourceTree = "<group>"; };
 		CADE04B91BA1DCE200A95846 /* StringResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringResource.h; sourceTree = "<group>"; };
@@ -179,6 +182,8 @@
 			children = (
 				CA7492181BA1BCA70019D8BC /* StringResourceDataSource.h */,
 				CA7492191BA1BCA70019D8BC /* StringResourceDataSource.m */,
+				CA3B90481BA84AAD0004263E /* StringResourceRow.h */,
+				CA3B90491BA84AAD0004263E /* StringResourceRow.m */,
 			);
 			name = TableDataSource;
 			sourceTree = "<group>";
@@ -257,6 +262,7 @@
 				CADE04BB1BA1DCE200A95846 /* StringResource.m in Sources */,
 				85BE223A199375D600A4A9E2 /* vector.c in Sources */,
 				85BE23151993888400A4A9E2 /* FCView.m in Sources */,
+				CA3B904A1BA84AAD0004263E /* StringResourceRow.m in Sources */,
 				85C867AC199CFBF300A03361 /* MainWindowController.m in Sources */,
 				CADE04BE1BA2E74800A95846 /* StringResWindowController.m in Sources */,
 			);

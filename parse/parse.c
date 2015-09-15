@@ -332,6 +332,7 @@ void parse_childs(resource_t * cur_node, vector_t * values){
 			return;
 		case ',':
 			break;
+        
 		default:
 			error("%c, excepted {, }; WIDGET", token);
 	}

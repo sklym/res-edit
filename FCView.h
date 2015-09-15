@@ -90,10 +90,7 @@ struct widget_pl{
 // -----------------------------------
 // Handle NSResponder Actions 
 // -----------------------------------
--(IBAction)moveUp:(id)sender;
--(IBAction)moveDown:(id)sender;
--(IBAction)moveLeft:(id)sender;
--(IBAction)moveRight:(id)sender;
+
 -(IBAction)setItemPropertiesToDefault:(id)sender;
 
 
